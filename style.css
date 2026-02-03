@@ -97,3 +97,15 @@ footer {
   border-top: 1px solid #30363d;
   color: #8b949e;
 }
+/* =========================
+   FOTO DE PERFIL
+   ========================= */
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #58a6ff;
+  margin-bottom: 20px;
+}
