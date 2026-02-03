@@ -2,49 +2,96 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Dhiogo Barros | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhiogo Barros | Data & BI Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
+  <header class="hero">
     <h1>Dhiogo Barros</h1>
-    <p>Analista M.I.S Sênior | SQL Server | Python | Power BI</p>
+    <p>Analista M.I.S Sênior | SQL Server | Snowflake | Python | Power BI</p>
+    <div class="links">
+      <a href="https://github.com/dhyogo86" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
   </header>
 
-  <section>
+  <section class="about">
     <h2>Sobre mim</h2>
     <p>
-      Profissional com forte atuação em dados, SQL Server, automações em Python e
-      desenvolvimento de relatórios estratégicos em Power BI.
+      Profissional com sólida experiência em dados, atuando com SQL Server,
+      Snowflake, Python e Power BI. Forte atuação em normalização de ambientes,
+      performance, engenharia de dados e geração de insights para operações.
     </p>
   </section>
 
-  <section>
-    <h2>Projetos</h2>
+  <section class="projects">
+    <h2>Projetos em Destaque</h2>
 
-    <div class="card">
-      <h3>🔹 Normalização SQL Server</h3>
-      <p>Reestruturação de procedures, views e jobs com foco em performance e escalabilidade.</p>
-      <a href="https://github.com/seu-usuario/sql-server" target="_blank">Ver projeto</a>
+    <div class="grid">
+
+      <div class="card">
+        <h3>❄️ Snowflake + Genesys</h3>
+        <p>
+          Modelagem e processamento de dados de presença, chamadas e performance
+          operacional a partir de dados do Genesys Cloud no Snowflake.
+        </p>
+        <ul>
+          <li>Agregações por intervalos de 30 minutos</li>
+          <li>Tratamento de timezone (America/Sao_Paulo)</li>
+          <li>Otimização de queries analíticas</li>
+        </ul>
+        <a href="https://github.com/dhyogo86" target="_blank">Ver exemplos</a>
+      </div>
+
+      <div class="card">
+        <h3>🗄️ SQL Server Enterprise</h3>
+        <p>
+          Normalização completa de ambiente SQL Server com foco em
+          performance, escalabilidade e alta disponibilidade.
+        </p>
+        <ul>
+          <li>Always On</li>
+          <li>Procedures e Views otimizadas</li>
+          <li>Jobs e logs operacionais</li>
+        </ul>
+        <a href="https://github.com/dhyogo86" target="_blank">Ver projetos</a>
+      </div>
+
+      <div class="card">
+        <h3>🐍 Python para Dados</h3>
+        <p>
+          Automações, ETL, integração com bancos de dados e backend
+          para aplicações internas.
+        </p>
+        <ul>
+          <li>pandas / PySpark</li>
+          <li>Flask / PyQt</li>
+          <li>ETL e automação</li>
+        </ul>
+        <a href="https://github.com/dhyogo86" target="_blank">Ver códigos</a>
+      </div>
+
+      <div class="card">
+        <h3>📊 Power BI Estratégico</h3>
+        <p>
+          Modelagem de dados, DAX avançado e Power Query
+          aplicados a cenários reais de negócio.
+        </p>
+        <ul>
+          <li>Fluxos de dados</li>
+          <li>DAX performático</li>
+          <li>Boas práticas</li>
+        </ul>
+        <a href="https://github.com/dhyogo86" target="_blank">Ver estudos</a>
+      </div>
+
     </div>
-
-    <div class="card">
-      <h3>🔹 Automação em Python</h3>
-      <p>Scripts para ETL, integração com bancos de dados e geração de relatórios.</p>
-      <a href="https://github.com/seu-usuario/python-projects" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="card">
-      <h3>🔹 Power BI Estratégico</h3>
-      <p>Modelagem, DAX e Power Query aplicados a cenários reais de negócio.</p>
-      <a href="#">Em breve</a>
-    </div>
-
   </section>
 
   <footer>
-    <p>© 2026 - Dhiogo Barros</p>
+    <p>© 2026 — Dhiogo Barros</p>
   </footer>
 
 </body>
