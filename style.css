@@ -132,3 +132,20 @@ footer {
   width: 100%;
   height: 100%;
 }
+
+
+/* ============================
+   Sql projeto
+   ============================
+*/
+.divider {
+  border: none;
+  height: 1px;
+  background: #30363d;
+  margin: 25px 0;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #c9d1d9;
+}
