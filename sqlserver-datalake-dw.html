@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Server | Data Lake & Data Warehouse</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>🗄️ SQL Server</h1>
+    <p>Data Lake, Data Warehouse e Integração Genesys & Avaya</p>
+
+    <div class="links">
+      <a href="index.html">⬅ Voltar ao Portfólio</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <section class="about">
+
+    <h2>Visão Geral do Projeto</h2>
+
+    <p>
+      Projeto de arquitetura e engenharia de dados utilizando SQL Server,
+      com foco na criação de um Data Lake e Data Warehouse estruturados,
+      integrando dados provenientes das plataformas Genesys e Avaya.
+    </p>
+
+    <p>
+      O objetivo principal foi padronizar a modelagem dos dados operacionais,
+      garantindo que indicadores como <strong>Recebidas, Atendidas e Abandonadas</strong>
+      possuíssem o mesmo layout, regras e granularidade, independentemente da origem.
+    </p>
+
+  </section>
+
+  <section class="projects">
+
+    <h2>Arquitetura e Modelagem</h2>
+
+    <div class="card">
+      <p>
+        A modelagem foi construída de forma que os dados de Genesys e Avaya
+        se encaixassem perfeitamente em um único padrão lógico,
+        permitindo a unificação das bases sem necessidade de retrabalho
+        em relatórios ou regras de negócio.
+      </p>
+
+      <ul>
+        <li>Criação de camadas de Data Lake para dados brutos</li>
+        <li>Data Warehouse com tabelas fato e dimensões padronizadas</li>
+        <li>Indicadores operacionais com layout único</li>
+        <li>Preparação para cruzamentos e consolidações futuras</li>
+      </ul>
+    </div>
+
+    <h2>Governança, Performance e Custos</h2>
+
+    <div class="card">
+      <p>
+        Parte fundamental da estratégia foi a separação entre histórico
+        e dados de tempo real, garantindo performance e otimização de custos.
+      </p>
+
+      <p>
+        O histórico de dados é mantido no SQL Server até <strong>D-1</strong>,
+        em um banco estruturado e otimizado para consultas analíticas.
+        Já os dados de <strong>D0</strong> são consumidos via consulta direta
+        ao Snowflake.
+      </p>
+
+      <ul>
+        <li>Melhor performance de atualização dos relatórios</li>
+        <li>Redução de processamento desnecessário no Snowflake</li>
+        <li>Diminuição de custos operacionais de dados</li>
+        <li>Arquitetura híbrida orientada a eficiência</li>
+      </ul>
+    </div>
+
+    <h2>Automação e Padronização</h2>
+
+    <div class="card">
+      <p>
+        Com a definição desse padrão arquitetural, diversos relatórios passaram
+        a ser considerados <strong>plug and play</strong>.
+      </p>
+
+      <p>
+        Como exemplo, o relatório <strong>Intraday</strong> já nasce pronto
+        em qualquer nova implantação. Basta ajustar os filtros de operação,
+        fila ou skill e aplicar as regras de negócio específicas.
+      </p>
+
+      <ul>
+        <li>Criação de tabelas, views e procedures reutilizáveis</li>
+        <li>Jobs automatizados para cargas e atualizações</li>
+        <li>Padronização que reduz tempo de implantação</li>
+        <li>Escalabilidade para novas operações</li>
+      </ul>
+    </div>
+
+    <h2>Coordenação e Trabalho em Equipe</h2>
+
+    <div class="card">
+      <p>
+        O projeto contou com a coordenação direta de um time composto por
+        <strong>duas pessoas</strong>, atuando de forma colaborativa
+        na construção da arquitetura, desenvolvimento das tabelas,
+        procedures e rotinas de carga.
+      </p>
+
+      <p>
+        É importante destacar que os resultados alcançados dentro do prazo
+        estipulado só foram possíveis graças ao comprometimento,
+        dedicação e alto nível técnico do time envolvido.
+      </p>
+
+      <p>
+        <strong>Este projeto é um reflexo direto do trabalho em equipe —
+        sem eles, nada disso teria sido possível dentro do tempo executado.</strong>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 — Dhiogo Barros</p>
+  </footer>
+
+</body>
+</html>
