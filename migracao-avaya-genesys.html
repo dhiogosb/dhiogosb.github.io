@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migração Avaya para Genesys | Projeto de Dados</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>🔄 Migração Avaya → Genesys</h1>
+    <p>Arquitetura de Dados, ETL e BI Estratégico</p>
+
+    <div class="links">
+      <a href="index.html">⬅ Voltar ao Portfólio</a>
+    </div>
+  </header>
+
+  <!-- VISÃO GERAL -->
+  <section class="about">
+    <h2>Visão Geral do Projeto</h2>
+
+    <p>
+      Projeto estratégico de migração da plataforma Avaya para Genesys,
+      envolvendo reestruturação completa da arquitetura de dados,
+      modelagem, extração, transformação e disponibilização das informações
+      para consumo analítico.
+    </p>
+
+    <p>
+      Toda a camada de <strong>Extração, Transformação e Carregamento (ETL)</strong>
+      foi desenhada e implementada por mim, com apoio de um time sob minha supervisão,
+      garantindo que os indicadores operacionais mantivessem consistência,
+      confiabilidade e continuidade histórica.
+    </p>
+  </section>
+
+  <!-- EXTRAÇÃO E TRANSFORMAÇÃO -->
+  <section class="projects">
+
+    <h2>Extração, Transformação e Modelagem</h2>
+
+    <div class="card">
+      <p>
+        O processo envolveu a criação das consultas de extração diretamente
+        nas fontes, tratamento das regras de negócio para adaptação à nossa
+        realidade operacional e padronização dos indicadores como:
+      </p>
+
+      <ul>
+        <li>Recebidas</li>
+        <li>Atendidas</li>
+        <li>Abandonadas</li>
+        <li>Nível de Serviço</li>
+        <li>TMA e demais métricas operacionais</li>
+      </ul>
+
+      <p>
+        A modelagem foi construída para garantir compatibilidade entre
+        os dados históricos do Avaya e os novos dados do Genesys,
+        permitindo comparabilidade e continuidade analítica.
+      </p>
+    </div>
+
+    <h2>Arquitetura de Armazenamento</h2>
+
+    <div class="card">
+      <p>
+        Como estratégia de performance e otimização de custos,
+        adotamos uma arquitetura híbrida de armazenamento:
+      </p>
+
+      <ul>
+        <li><strong>Histórico (D-1 para trás)</strong> armazenado no SQL Server</li>
+        <li><strong>Dados do dia atual (D0)</strong> consultados diretamente no Snowflake</li>
+      </ul>
+
+      <p>
+        Essa abordagem garantiu atualização mais rápida dos relatórios,
+        redução de processamento desnecessário no Snowflake
+        e maior eficiência operacional.
+      </p>
+
+      <p>
+        🔎 <a href="arquitetura-hibrida-sql-snowflake.html">
+        Clique aqui para ver detalhes da solução híbrida SQL Server + Snowflake
+        </a>
+      </p>
+    </div>
+
+    <h2>Power BI e Fluxos de Dados</h2>
+
+    <div class="card">
+      <p>
+        Além da camada de dados, participei ativamente da construção
+        dos fluxos de dados no Power BI, modelagem semântica e criação
+        dos relatórios finais utilizados pelas áreas operacionais.
+      </p>
+
+      <ul>
+        <li>Criação de Dataflows</li>
+        <li>Modelagem dimensional</li>
+        <li>Padronização de métricas</li>
+        <li>Dashboards estratégicos e operacionais</li>
+      </ul>
+
+      <p>
+        O objetivo foi garantir que a migração tecnológica não impactasse
+        a leitura dos indicadores pelo negócio, mantendo estabilidade,
+        confiabilidade e performance.
+      </p>
+    </div>
+
+    <h2>Liderança e Coordenação</h2>
+
+    <div class="card">
+      <p>
+        O projeto foi conduzido sob minha coordenação na frente de dados,
+        contando com um time técnico atuando na implementação das rotinas,
+        validações e testes.
+      </p>
+
+      <p>
+        A migração exigiu alinhamento constante entre dados, BI e operação,
+        assegurando que as regras de negócio fossem corretamente traduzidas
+        para o novo ambiente.
+      </p>
+
+      <p>
+        O resultado foi uma transição estruturada, com manutenção do histórico,
+        melhoria de performance e criação de uma base preparada
+        para evoluções futuras.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 — Dhiogo Barros</p>
+  </footer>
+
+</body>
+</html>
