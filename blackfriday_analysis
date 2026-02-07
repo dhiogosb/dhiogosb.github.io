@@ -17,9 +17,9 @@
 
     <div class="links">
       <a href="index.html">⬅ Voltar ao Portfólio</a>
-      <a href="https://colab.research.google.com/github/dhiogosb/SEU_REPO/blob/main/seu_notebook.ipynb" target="_blank">
-        🚀 Abrir Notebook no Colab
-      </a>
+    <a href="https://colab.research.google.com/github/dhiogosb/blackfriday-spark-analysis/blob/main/blackfriday_analysis.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg">
+    </a>
     </div>
   </header>
 
