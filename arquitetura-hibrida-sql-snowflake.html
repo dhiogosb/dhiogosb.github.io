@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Técnico | Análise Black Friday</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>📊 Teste Técnico – Análise de Dados</h1>
+    <p>SQL • Python • Spark (PySpark) • Análise Exploratória</p>
+
+    <div class="links">
+      <a href="index.html">⬅ Voltar ao Portfólio</a>
+      <a href="https://colab.research.google.com/github/dhiogosb/SEU_REPO/blob/main/seu_notebook.ipynb" target="_blank">
+        🚀 Abrir Notebook no Colab
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTEXTO -->
+  <section class="about">
+    <h2>Objetivo do Teste</h2>
+
+    <p>
+      Este teste teve como objetivo validar competências técnicas em 
+      <strong>Análise de Dados, SQL e Python</strong>, utilizando ambiente 
+      Notebook com Spark (PySpark).
+    </p>
+
+    <p>
+      Foram avaliados: correção das respostas, qualidade do código, 
+      organização lógica e capacidade analítica aplicada ao contexto de negócio.
+    </p>
+
+    <p>
+      O dataset utilizado contém dados de vendas de um e-commerce durante 
+      a Black Friday, com informações sobre usuários, perfil demográfico, 
+      produtos e valores transacionados.
+    </p>
+  </section>
+
+  <!-- DATASET -->
+  <section class="projects">
+
+    <h2>Estrutura do Dataset</h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>usuario:</strong> identificador do comprador</li>
+        <li><strong>estado_civil:</strong> 0 = solteiro | 1 = casado</li>
+        <li><strong>genero:</strong> M = masculino | F = feminino</li>
+        <li><strong>idade:</strong> faixa etária</li>
+        <li><strong>produto:</strong> item comprado</li>
+        <li><strong>produto_categoria:</strong> categoria do produto</li>
+        <li><strong>valor:</strong> valor da venda</li>
+      </ul>
+    </div>
+
+    <h2>ETAPA 1 – Consultas Analíticas (Spark / SQL)</h2>
+
+    <div class="card">
+      <ol>
+        <li>Ticket médio por idade (ordenado por idade)</li>
+        <li>Total de vendas por idade (ordenado pelo valor total)</li>
+        <li>Top 10 produtos mais vendidos</li>
+        <li>Quantidade de usuários únicos</li>
+        <li>Top 10 usuários por valor total de vendas</li>
+        <li>Percentual de usuários únicos por faixa etária</li>
+      </ol>
+
+      <p>
+        As consultas foram desenvolvidas utilizando Spark SQL e PySpark,
+        priorizando performance e clareza lógica.
+      </p>
+    </div>
+
+    <h2>ETAPA 2 – Análise Exploratória e Insights de Negócio</h2>
+
+    <div class="card">
+      <p>
+        Além das consultas técnicas, foi realizada análise exploratória 
+        com foco em tomada de decisão estratégica para a próxima Black Friday.
+      </p>
+
+      <h3>1️⃣ Identificação do Público-Alvo</h3>
+      <p>
+        A análise considerou ticket médio e volume de vendas,
+        avaliando variáveis como estado civil, gênero, idade,
+        produto e categoria.
+      </p>
+
+      <h3>2️⃣ Performance por Categoria</h3>
+      <p>
+        Avaliação das saídas por categoria de produto,
+        com visualização gráfica e racional estratégico.
+      </p>
+
+      <h3>3️⃣ Planejamento para o Próximo Ano</h3>
+      <p>
+        Definição dos 3 produtos prioritários para investimento
+        e 1 produto recomendado para descontinuação,
+        com base em volume, ticket médio e potencial de crescimento.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CONCLUSÃO -->
+  <section class="about">
+    <h2>Resultado</h2>
+
+    <p>
+      O teste demonstra capacidade de:
+    </p>
+
+    <ul>
+      <li>Manipulação de grandes volumes de dados com Spark</li>
+      <li>Construção de queries performáticas</li>
+      <li>Análise orientada a negócio</li>
+      <li>Geração de insights acionáveis</li>
+      <li>Clareza na documentação técnica</li>
+    </ul>
+
+    <p>
+      🔎 O notebook completo pode ser acessado no botão acima.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 — Dhiogo Barros</p>
+  </footer>
+
+</body>
+</html>
