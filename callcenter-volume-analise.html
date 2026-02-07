@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Call Center – Critério de Consolidação</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        h2 {
+            margin-top: 50px;
+            color: #7dd3fc;
+            border-left: 4px solid #38bdf8;
+            padding-left: 12px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #bae6fd;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        .highlight {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .numbers {
+            background-color: #111827;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .conclusion {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 1px solid #334155;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #38bdf8;
+            color: #0f172a;
+            border-radius: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .badge:hover {
+            background-color: #0ea5e9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Você sabe como seu Call Center conta o volume?</h1>
+    <p><strong>O fim da chamada ou o início da demanda:</strong> qual critério define sua estratégia?</p>
+
+    <h2>Introdução</h2>
+    <p>
+        A forma como os dados são agrupados em relatórios operacionais impacta diretamente a leitura do desempenho e a tomada de decisão.
+        Pequenas diferenças no critério de consolidação podem gerar distorções relevantes, principalmente em indicadores como
+        <strong>recebidas, atendidas e abandonadas</strong>.
+    </p>
+    <p>
+        Este artigo apresenta a análise da mudança do critério de agrupamento:
+        <strong>do término da chamada para o início da chamada</strong> como referência principal de consolidação.
+    </p>
+
+    <h2>O Problema do Agrupamento pelo Fim da Chamada</h2>
+
+    <div class="highlight">
+        <p><strong>Exemplo:</strong></p>
+        <ul>
+            <li>Chamada entra às 07:59</li>
+            <li>Termina às 08:05</li>
+            <li>É contabilizada no intervalo das 08h</li>
+        </ul>
+    </div>
+
+    <p>Consequências:</p>
+    <ul>
+        <li>Subestimação da demanda real no horário de entrada</li>
+        <li>Distorção na leitura operacional</li>
+        <li>Perda de precisão intradiária</li>
+    </ul>
+
+    <h2>Mudança para Agrupamento pelo Início da Chamada</h2>
+
+    <ul>
+        <li>Chamadas são contabilizadas no intervalo de entrada</li>
+        <li>Atendidas e abandonadas permanecem vinculadas à origem</li>
+        <li>Volume reflete a pressão real de demanda</li>
+    </ul>
+
+    <h2>Comparativo Prático</h2>
+
+    <h3>Chamadas Recebidas (07:00)</h3>
+    <div class="numbers">
+        Projetado: 20<br>
+        Pelo início: 30<br>
+        Pelo fim: 18
+    </div>
+
+    <p>
+        O agrupamento pelo início revelou volume <strong>50% superior</strong> ao projetado,
+        enquanto pelo fim indicou volume <strong>10% inferior</strong>.
+    </p>
+
+    <h3>Chamadas Atendidas</h3>
+    <div class="numbers">
+        Projetado: 18<br>
+        Pelo início: 11<br>
+        Pelo fim: 7
+    </div>
+
+    <h3>Chamadas Abandonadas</h3>
+    <div class="numbers">
+        Projetado: 0<br>
+        Pelo início: 14<br>
+        Pelo fim: 11
+    </div>
+
+    <h2>🔎 Atendidas Maiores que Recebidas</h2>
+
+    <p>
+        No agrupamento pelo início pode ocorrer um cenário onde
+        <strong>atendidas > recebidas</strong> no intervalo.
+    </p>
+
+    <p>
+        Isso ocorre devido à <strong>herança de chamadas</strong> entre intervalos —
+        chamadas recebidas anteriormente podem ser atendidas no intervalo atual.
+    </p>
+
+    <h2>Proposta de Evolução do Relatório</h2>
+
+    <h3>✅ Sugestão 1 – Coluna “Finalizadas”</h3>
+    <div class="numbers">
+        Recebidas | Atendidas | Finalizadas | Abandonadas
+    </div>
+
+    <p>
+        Separando claramente:
+        <br><strong>Entrada de demanda</strong> vs <strong>Processamento</strong>.
+    </p>
+
+    <h3>✅ Sugestão 2 – Volume Herdado</h3>
+    <div class="numbers">
+        Recebidas | Atendidas | Herdadas | Finalizadas | Abandonadas
+    </div>
+
+    <ul>
+        <li>Recebidas → Entraram no intervalo</li>
+        <li>Herdadas → Vieram de intervalo anterior</li>
+        <li>Atendidas → Total atendido</li>
+        <li>Finalizadas → Total encerrado</li>
+        <li>Abandonadas → Desistências</li>
+    </ul>
+
+    <div class="conclusion">
+        <h2>Conclusão</h2>
+        <p>
+            Consolidar pelo início da chamada posiciona corretamente a demanda no momento em que ela impacta a operação.
+            A inclusão de colunas como <strong>Finalizadas</strong> e <strong>Herdadas</strong>
+            eleva o relatório de uma visão volumétrica para uma visão estrutural de fluxo.
+        </p>
+
+        <p>
+            Isso garante:
+        </p>
+
+        <ul>
+            <li>Transparência</li>
+            <li>Coerência matemática</li>
+            <li>Maior precisão estratégica</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="badge">← Voltar ao Portfólio</a>
+
+</div>
+
+</body>
+                                                      </html>
