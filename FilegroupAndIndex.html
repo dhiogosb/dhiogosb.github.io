@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Filegroup + Index no SQL Server | Ganho Real de Performance</title>
+  <meta name="description" content="Como o uso estratégico de filegroups associados a índices no SQL Server pode gerar ganho real de performance em ambientes de dados.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO DO ARTIGO -->
+  <header class="hero">
+    <h1>Filegroup + Index no SQL Server</h1>
+    <p>Separar para escalar: ganho real de performance em ambientes de dados</p>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <section class="about">
+
+    <p>
+      Em muitos ambientes SQL Server, o crescimento do volume de dados acontece
+      mais rápido que a evolução da arquitetura física do banco.
+      O resultado é previsível: lentidão, contenção de I/O e degradação progressiva.
+    </p>
+
+    <p>
+      Um dos ajustes mais subestimados — e que gera ganho real —
+      é o uso estratégico de <strong>filegroups associados a índices</strong>.
+    </p>
+
+    <h2>O problema comum</h2>
+
+    <p>
+      Em ambientes não organizados, tabelas e índices compartilham o mesmo filegroup,
+      geralmente o PRIMARY. Isso faz com que:
+    </p>
+
+    <ul>
+      <li>Dados e índices disputem o mesmo disco</li>
+      <li>Leituras e escritas concorram pelo mesmo I/O</li>
+      <li>Rebuild de índice impacte toda a base</li>
+      <li>Backups e restores sejam menos flexíveis</li>
+    </ul>
+
+    <h2>O que muda ao separar filegroups</h2>
+
+    <p>
+      Ao mover índices estratégicos para um filegroup dedicado,
+      principalmente em storage separado, você cria paralelismo físico.
+    </p>
+
+    <p>
+      Isso permite:
+    </p>
+
+    <ul>
+      <li>Distribuição de carga de leitura</li>
+      <li>Redução de contenção de disco</li>
+      <li>Melhor uso de I/O em ambientes com alto volume</li>
+      <li>Maior controle em manutenção e backup</li>
+    </ul>
+
+    <h2>O ganho real na prática</h2>
+
+    <p>
+      Em ambientes analíticos com consultas pesadas,
+      a separação física de índices reduziu tempo médio de leitura
+      entre 15% e 35%, dependendo do volume e padrão de acesso.
+    </p>
+
+    <p>
+      Não é milagre. É arquitetura.
+    </p>
+
+    <h2>Quando vale a pena</h2>
+
+    <ul>
+      <li>Tabelas grandes com alto volume de leitura</li>
+      <li>Ambientes com múltiplos discos ou storage dedicado</li>
+      <li>Workloads analíticas</li>
+      <li>Necessidade de rebuild frequente de índices</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+
+    <p>
+      Engenharia de dados não é apenas modelagem lógica.
+      É também organização física.
+    </p>
+
+    <p>
+      Filegroup bem utilizado não é detalhe técnico —
+      é decisão arquitetural que impacta performance,
+      escalabilidade e governança.
+    </p>
+
+    <hr class="divider">
+
+    <p>
+      <a href="index.html">← Voltar para o portfólio</a>
+    </p>
+
+  </section>
+
+  <footer>
+    <p>© 2026 — Dhiogo Barros</p>
+  </footer>
+
+</body>
+</html>
