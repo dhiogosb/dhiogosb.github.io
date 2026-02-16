@@ -6,26 +6,31 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #0d1117;
-  color: #c9d1d9;
+  background: #f5f6f8;   /* fundo cinza bem claro */
+  color: #2d2d2d;        /* texto principal */
   line-height: 1.6;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0d1117, #161b22);
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: #58a6ff;
+  color: #1f2937; /* cinza escuro elegante */
 }
 
 .hero p {
   margin-top: 10px;
   font-size: 1.1rem;
-  color: #8b949e;
+  color: #6b7280; /* cinza médio */
 }
 
 .links {
@@ -35,17 +40,22 @@ body {
 .links a {
   margin: 0 10px;
   padding: 10px 18px;
-  border: 1px solid #30363d;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
-  color: #58a6ff;
-  transition: all 0.3s;
+  color: #374151;
+  background: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .links a:hover {
-  background: #58a6ff;
-  color: #0d1117;
+  background: #1f2937;
+  color: #ffffff;
 }
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
   padding: 60px 10%;
@@ -53,8 +63,12 @@ section {
 
 h2 {
   margin-bottom: 30px;
-  color: #58a6ff;
+  color: #1f2937;
 }
+
+/* =========================
+   GRID PROJETOS
+========================= */
 
 .projects .grid {
   display: grid;
@@ -63,21 +77,21 @@ h2 {
 }
 
 .card {
-  background: #161b22;
+  background: #ffffff;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid #30363d;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
   margin-bottom: 15px;
-  color: #79c0ff;
+  color: #111827;
 }
 
 .card ul {
@@ -86,43 +100,54 @@ h2 {
 }
 
 .card a {
-  color: #58a6ff;
+  color: #1f2937;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
   padding: 30px;
-  border-top: 1px solid #30363d;
-  color: #8b949e;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  background: #ffffff;
 }
+
 /* =========================
    FOTO DE PERFIL
-   ========================= */
+========================= */
 
 .profile-pic {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #58a6ff;
+  border: 3px solid #e5e7eb;
   margin-bottom: 20px;
 }
+
 /* =========================
    POWER BI PAGE
-   ========================= */
+========================= */
 
 .powerbi-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   margin-top: 30px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #30363d;
-  background: #0d1117;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .powerbi-container iframe {
@@ -133,25 +158,25 @@ footer {
   height: 100%;
 }
 
+/* =========================
+   DIVIDER
+========================= */
 
-/* ============================
-   Sql projeto
-   ============================
-*/
 .divider {
   border: none;
   height: 1px;
-  background: #30363d;
+  background: #e5e7eb;
   margin: 25px 0;
 }
 
 .highlight {
   font-weight: 600;
-  color: #c9d1d9;
+  color: #111827;
 }
+
 /* =========================
    CERTIFICADOS
-   ========================= */
+========================= */
 
 .certificate img {
   width: 100%;
@@ -160,8 +185,8 @@ footer {
 }
 
 .certificate img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .certificate h3 {
@@ -170,5 +195,5 @@ footer {
 
 .certificate p {
   font-size: 0.9rem;
-  color: #8b949e;
+  color: #6b7280;
 }
